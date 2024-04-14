@@ -1,0 +1,125 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Submission</title>
+    <link rel="stylesheet" href="{% static 'form.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Order Submission</h2>
+        <form id="orderForm" method="post" action="{% url 'save_order' %}"  enctype="multipart/form-data"  onchange="toggleFields()">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="agentName">Agent Name:</label>
+                <div class="select-container">
+                    <select id="agentName" name="agentName">
+                        <option value="Adriao Sebastiao">Adriao Sebastiao</option>
+                        <option value="Afsal Kottilungal">Afsal Kottilungal</option>
+                        <option value="Faseehullah Khan">Faseehullah Khan</option>
+                        <option value="Kamran Khan">Kamran Khan</option>
+                        <option value="AbdulRehman Tarig">AbdulRehman Tarig</option>
+                        <option value="MD Maruf">MD Maruf</option>
+                        <option value="Manilyn Hicken">Manilyn Hicken</option>
+                        <option value="Mohammad Masud Howlader">Mohammad Masud Howlader</option>
+                        <option value="Mohamed Nadeer Kundani">Mohamed Nadeer Kundani</option>
+                        <option value="Mohammed Ashig">Mohammed Ashig</option>
+                        <option value="Mohammed Biras">Mohammed Biras</option>
+                        <option value="Mohammed Shihab">Mohammed Shihab</option>
+                        <option value="Muhammadshiras Chellattanveedu">Muhammadshiras Chellattanveedu</option>
+                        <option value="Muhammed Jasir">Muhammed Jasir</option>
+                        <option value="Noufal thenginthodi">Noufal thenginthodi</option>
+                        <option value="Reneesh Alakkandy">Reneesh Alakkandy</option>
+                        <option value="Sanjul Padannakara">Sanjul Padannakara</option>
+                        <option value="Shoib Hussain">Shoib Hussain</option>
+                        <option value="Sonu Ravarikandi">Sonu Ravarikandi</option>
+                        <option value="Sumesh Subhash">Sumesh Subhash</option>
+                        <option value="Yasir Riaz">Yasir Riaz</option>
+                        <option value="Satishchandra Yadav">Satishchandra Yadav</option>
+                        <option value="Rajeev TR">Rajeev TR</option>
+                        <option value="Mohammad Omar Faruk">Mohammad Omar Faruk</option>
+                        <option value="Mohammed Ayub Ali">Mohammed Ayub Ali</option>
+                        <option value="Mohamad Kamar S Bepari">Mohamad Kamar S Bepari</option>
+                    </select>
+                    <div class="selection-highlight"></div>
+                </div>
+            </div>
+
+            <select id="selectionType" name="selectionType" onchange="toggleFields()">
+                <option value="Select an option">Select an option</option>
+                <option value="Order Submit">Order Submit</option>
+                <option value="Visit only">Visit only</option>
+            </select>
+
+            <div class="form-group">
+                <label for="crNumber">CR Number:</label>
+                <input type="text" id="crNumber" name="crNumber" placeholder="Enter a value for this field.">
+            </div>
+
+            <div class="form-group">
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" placeholder="Company Name">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" placeholder="Phone">
+            </div>
+
+            <div id="contactInfoContainer">
+                <div class="form-group">
+                    <label for="contactPersonInformation" id="info">Contact Person Information:</label>
+                    <input type="text" id="contactPersonInformation" name="contactPersonInformation" placeholder="Contact Person Information">
+                </div>
+
+                <div class="form-group">
+                    <label for="customerEmail" id="email">Customer Email:</label>
+                    <input type="email" id="customerEmail" name="customerEmail" placeholder="Customer Email">
+                </div>
+            </div>
+          <div id="orderFormsContainer">
+    <div class="form-group file-input-group">
+        <label class="file-label" for="orderForms">Choose Order Forms File:</label>
+        <input type="file" id="orderForms" name="orderForms" class="file-input" accept=".pdf,.doc,.docx">
+    </div>
+    <div class="form-group file-input-group">
+        <label class="file-label" for="orderFormsPart2">Choose Order Forms Part 2 File:</label>
+        <input type="file" id="orderFormsPart2" name="orderFormsPart2" class="file-input" accept=".pdf,.doc,.docx">
+    </div>
+</div>
+
+            
+
+            <div class="form-group">
+                <label for="blockNumber">Block Number:</label>
+                <input type="text" id="blockNumber" name="blockNumber" placeholder="Block Number">
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="Location">
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" placeholder="Feedback"></textarea>
+            </div>
+
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+   
+</body>
+
+</html>
+
+<script src="{% static 'form.js' %}"></script>

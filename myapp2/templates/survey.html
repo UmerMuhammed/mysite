@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'survey.css' %}">
+    
+    <title>Survey Details</title>
+
+  
+</head>
+
+<body>
+    <h2>Survey Details</h2>
+    <!-- Dropdown menu for category selection -->
+    <div class="abc">
+    <div class="dropdown">
+        <button class="dropbtn">Select Category</button>
+        <div class="dropdown-content">
+            <a href="/survey" onclick="filterTable('all')">All Surveys</a>
+            <a href="/filter-table/good" >Good</a>
+            <a href="/filter-table/normal">Normal</a>
+        </div>
+    </div>
+</div>
+    <table id="surveyTable">
+        <thead>
+            <tr>
+                <th>Agent Name</th>
+                <th>CR Number</th>
+                <th>Company Name</th>
+                <th>Phone</th>
+                <th>Block Number</th>
+                <th>Location</th>
+                <th>Feedback</th>
+                <th>Contact Person Information</th>
+                <th>Customer Email</th>
+                <th>Document 1</th>
+                <th>Document 2</th>
+                <th>Feedback Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr class="survey-row" data-category="{{ order.feedback }}">
+                <td>{{ order.agent_name }}</td>
+                <td>{{ order.cr_number }}</td>
+                <td>{{ order.company_name }}</td>
+                <td>{{ order.phone }}</td>
+                <td>{{ order.block_number }}</td>
+                <td>{{ order.location }}</td>
+                <td>{{ order.feedback }}</td>
+                <td>{{ order.contact_person_information }}</td>
+                <td>{{ order.customer_email }}</td>
+                <td>
+                    {% if order.order_forms %}
+                        <a href="{{ order.order_forms.url }}" target="_blank">Document 1</a>
+                    {% else %}
+                        No document available
+                    {% endif %}
+                </td>
+                <td>
+                    {% if order.order_forms_part_2 %}
+                        <a href="{{ order.order_forms_part_2.url }}" target="_blank">Document 2</a>
+                    {% else %}
+                        No document available
+                    {% endif %}
+                </td>
+                <td class="dropdown-button">
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="toggleCategory(event)" value="good">Select Category</button>
+                       
+                        <div class="dropdown-content">
+                            <a href="/survey/{{order.id}}/Good" class="feedback-button good" name="feedback_button">Good</a>
+                            <a href="/survey/{{order.id}}/Normal" class="feedback-button normal" name="feedback_button">Normal</a>
+                        </div>
+                    </div>
+                </td>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <button class="clear_button" onclick="clearTable()" style="padding: 10px 20px; font-size: 16px; background-color: black; color: white; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s;">Clear Table</button>
+
+
+
+    <div id="goodSurveysSection" style="display: none;">
+        <h2>Good Surveys</h2>
+        <table>
+            <thead>
+                <!-- Header row -->
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                <tr>
+                    <!-- Render order details here -->
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">No surveys available</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div id="normalSurveysSection" style="display: none;">
+        <h2>Normal Surveys</h2>
+        <table>
+            <thead>
+                <!-- Header row -->
+            </thead>
+            <tbody>
+                {% for order in normal_orders %}
+                <tr>
+                    <!-- Render order details here -->
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">No normal surveys available</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+
+</html>
+<script src="{% static 'survey.js' %}"></script>

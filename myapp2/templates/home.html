@@ -1,0 +1,158 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="/form" class="view-survey"><span class="inner-text">Survey Form</span></a>
+
+        <div></div>
+        <img class="nav-img" src="{% static 'images/navlogo.png' %}">
+        <a href="/survey" class="view-survey"><span class="inner-text">Survey Info</span></a>
+    </div>
+
+    <div>
+        <div class="carousel">
+            <ul class="slides">
+                <input type="radio" name="radio-buttons" id="img-1" checked />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="{% static 'images/carousel11.png' %}">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-3" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-2" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-2" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="{% static 'images/carousel2.png' %}">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-1" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-3" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-3" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="{% static 'images/Screenshot 2024-04-01 023241.png' %}">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-2" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-1" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <div class="carousel-dots">
+                    <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                    <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                    <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <section class="sec1">
+        <div class="card">
+            <img class="icon" src="{% static 'images/smartphone.png' %}" alt="Smartphone icon">
+
+            <div class="text">
+                <h2>Smartphones</h2>
+                <p>Get the latest business devices & accessories</p>
+                <a href="https://business.stc.com.bh/en/business-devices/smartphones" class="button">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="icon" src="{% static 'images/business.png' %}" alt="Smartphone icon">
+            <div class="text">
+                <h2>Business Broadband</h2>
+                <p>Fast and reliabe, stc's business Broadband can handle high-impact organizational use.</p>
+                <a href="https://business.stc.com.bh/en/business-internet/5g-business-broadband" class="button">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="icon" src="{% static 'images/stc.webp' %}" alt="Smartphone icon">
+            <div class="text">
+                <h2>stc One Badala (Cloud PBX)</h2>
+                <p>Discover stc One Badala, the next level of business communication for SMEs. Configured in an instant, no call goes unanswered.</p>
+                <a href="https://business.stc.com.bh/en/business-comunication/stc-one-badala" class="button3">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="icon" src="{% static 'images/tajer.webp' %}" alt="Smartphone icon">
+            <div class="text">
+                <h2>stc Tajer</h2>
+                <p>Discover stc One Badala, the next level of business communication for SMEs. Configured in an instant, no call goes unanswered.</p>
+                <a href="https://business.stc.com.bh/en/cloud-solutions/digitize-your-business/stc-tajer" class="button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+         </div>
+      </footer>
+    
+   
+    
+    
+    
+
+
+</body>
+
+</html>

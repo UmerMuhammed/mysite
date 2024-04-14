@@ -1,0 +1,269 @@
+table {
+    width: 100%; /* Adjust the width as needed */
+    border-collapse: collapse;
+    border-spacing: 0px; /* Adjust the gap size as needed */
+    margin-bottom: 20px;
+    table-layout: fixed; /* Ensure that table cells have equal width */
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #45a049;
+}
+.small-button {
+    padding: 5px 10px;
+    font-size: 8px;
+}
+
+.dropdown
+{
+    margin: 20px;
+    margin-left: 660px;
+
+}
+.dropbtn {
+    background-color: #ff0000; 
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.19); 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Style for action buttons */
+.feedback-button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
+    width: 78px;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.feedback-button1 {
+    padding: 10px 20px;
+    background-color: #ff0000; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
+    width: 78px;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.feedback-button:hover {
+    background-color: #45a049; /* Darker green */
+}
+.custom-dropdown {
+    position: relative;
+    width: 10px;
+    display: block;
+}
+.dropdown
+{
+    position: relative;
+    right: 670px;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    width: 110px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-button:hover .dropdown-content {
+    display: block;
+}
+
+.abc
+{
+    margin-left: 200px;
+}
+.dropdown-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-button.normal {
+    background-color: red; /* Red */
+}
+
+.dropdown-button.good {
+    background-color: green; /* Green */
+}
+#text
+{
+    color: black;
+}
+
+
+
+
+.notification-card {
+    position: fixed;
+    top: 50%;
+    left: 10px; /* Initial position: off the screen */
+    transform: translate(0, -50%);
+    background-color: #000000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: right 0.3s ease; 
+    display: none;
+    width: 280px;
+    z-index: 1000;
+
+  }
+  
+  .notification-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .notification-content p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+
+  .notification-card1 {
+    position: fixed;
+    top: 50%;
+    left: -300px; /* Initial position: off the screen */
+    transform: translate(0, -50%);
+    background-color: #000000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: right 0.3s ease; 
+    display: none;
+  }
+  
+  .notification-content1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .notification-content1 p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
